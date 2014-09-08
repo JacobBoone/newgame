@@ -26,3 +26,19 @@ body{
 	position: absolute;
 	padding-left: 100px;
 }
+
+.xwing{
+	-webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
+	width: 90px;
+	height: 140px;
+	position: absolute;
+	padding-left: 100px;
+}
+
+.bullet {
+	color: firebrick;
+}
