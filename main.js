@@ -74,8 +74,15 @@ $(document).keydown(function(e) {
         console.log('down') 
         break;
 
+        case 81:// diagonal up left
+        $('.jet').animate({top: "-=10px", left:"-=10px"}, 'fast');
+        console.log('diag left up') 
+        break;
 
-
+        case 69:// diagonal up right
+        $('.jet').animate({top: "-=10px", left:"+=10px"}, 'fast');
+        console.log('diag left up') 
+        break;
 
 
         default: return; // exit this handler for other keys
