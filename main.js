@@ -53,6 +53,31 @@ $(document).keydown(function(e) {
         console.log('down') 
         break;
 
+        // ----------WASD
+        case 65: // left
+        $('.jet').animate({left: "-=10px"}, 'fast');
+        console.log('left')
+        break;
+
+        case 87: // up
+        $('.jet').animate({top: "-=10px"}, 'fast');
+        console.log('up')
+        break;
+
+        case 68: // right
+        console.log('right')
+		$('.jet').animate({left: "+=10px"}, 'fast');
+        break;
+
+        case 83:// down
+        $('.jet').animate({top: "+=10px"}, 'fast');
+        console.log('down') 
+        break;
+
+
+
+
+
         default: return; // exit this handler for other keys
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
