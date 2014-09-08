@@ -1,5 +1,5 @@
-.fa-crop {
-	/*float: right;*/
-	width: 100px;
-	height: 100px;
+.fa-fighter-jet{
+	color: blue;
+	padding-left: 10px;
+	position: absolute;
 }
