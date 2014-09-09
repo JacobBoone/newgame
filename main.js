@@ -1,6 +1,32 @@
+// constructor
+var Rebelship = function(name, image){
+	this.name = name;
+	this.image = image;
+
+}
+
+// Declaring the images as objects
+var imgXwing = $('<img class="xwing">').attr('src', 'images/X-wing.png');
+var imgFalcon = $('<img class="falcon">').attr('src', 'images/falcon.png');
+
+//new rebel ships
+var xwing = new Rebelship('xwing', imgXwing);
+var falcon = new Rebelship('falcon', imgFalcon);
+
+
+//array of created rebel ships
+var rebelShipsArr = [xwing, falcon]
+
+var displayRebels = function(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        $('#rebelfleet').append(arr[i].image)
+    };
+}
+
 $(document).on('ready', function() {
  
-
+    displayRebels(rebelShipsArr);
+    
 
 // $(document).keydown(function(e) {
 //     switch(e.which) {

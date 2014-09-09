@@ -38,6 +38,7 @@ body{
 	height: 140px;
 	position: absolute;
 	z-index: 1;
+	display: inline-block;
 	/*padding-left: 100px;*/
 }
 
@@ -47,9 +48,10 @@ body{
     -ms-transform: rotate(90deg);   /* IE 9 */
     -o-transform: rotate(90deg);   /* Opera */
     transform: rotate(90deg);
-	width: 300px;
+	width: 110px;
 	/*height: 140px;*/
 	position: absolute;
+	display: inline-block;
 	/*padding-left: 96px;*/
 	/*padding-top: 174px;*/
 }
