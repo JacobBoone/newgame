@@ -1,9 +1,21 @@
-// constructor
+// namespace to contain all the variables. use revailing module pattern with IFFE.
+// IFFE: function expression
+// var SpaceGame = (function() {
+
+// var MAX_TOP = 70;
+// var MAX_LEFT = 95;
+
+
+
+
+// Constructor
 var Rebelship = function(name, image){
 	this.name = name;
 	this.image = image;
 
 }
+
+
 
 // Declaring the images as objects
 var imgXwing = $('<img class="xwing">').attr('src', 'images/X-wing.png');
@@ -15,7 +27,8 @@ var falcon = new Rebelship('falcon', imgFalcon);
 
 
 //array of created rebel ships
-var rebelShipsArr = [xwing, falcon]
+// var rebelShipsArr = [xwing, falcon];
+var rebelShipsArr = [xwing];
 
 var displayRebels = function(arr) {
     for (var i = 0; i < arr.length; i++) {
@@ -26,7 +39,7 @@ var displayRebels = function(arr) {
 $(document).on('ready', function() {
  
     displayRebels(rebelShipsArr);
-    
+
 
 // $(document).keydown(function(e) {
 //     switch(e.which) {
