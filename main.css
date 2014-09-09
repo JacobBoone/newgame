@@ -25,10 +25,19 @@ body{
 	width: 90px;
 	height: 140px;
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	display: inline-block;
 	left: 8%;
 	/*padding-left: 100px;*/
+}
+
+.ship{
+	width: 140px;
+	height: 130px;
+	position: absolute;
+	left: 8%;
+	top: 8%;
+	/*background: white;*/
 }
 
 .falcon{
@@ -45,6 +54,27 @@ body{
 	/*padding-top: 174px;*/
 }
 
-.bullet {
-	color: firebrick;
+.red-bullettop {
+	background-color: red;
+	border-radius: 1px;
+	width: 10px;
+	height: 2px;
+	z-index: 2;
+	top: 28px;
+	left: 80px;
+	position: absolute;
+
 }
+
+.red-bulletbottom {
+	background-color: red;
+	border-radius: 1px;
+	width: 10px;
+	height: 2px;
+	z-index: 2;
+	top: 110px;
+	left: 80px;
+	position: absolute;
+
+}
+
