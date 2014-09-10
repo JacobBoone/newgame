@@ -15,12 +15,12 @@ var Rebelship = function(name, image){
 
 
     //array of created rebel ships
-    // var rebelShipsArr = [xwing, falcon];
-    var rebelShipsArr = [xwing];
+    var rebelShipsArr = [xwing, falcon];
+    // var rebelShipsArr = [xwing];
 
     var displayRebels = function(arr) {
         for (var i = 0; i < arr.length; i++) {
-            $('.ship').append(arr[i].image)
+            $('.ship').append(arr[1].image)
         };
     }
 
@@ -156,9 +156,14 @@ $(document).keydown(function(e) {
 
 function flyingBullet(){
     console.log('flies')
+    var xAxisLimit = 1350;
       $(".bullet").each(function() {
             var oldLeft = $(this).offset().left;
             $(this).css("left", oldLeft + 10 + "px");
+            // if (xAxisLimit){
+            //     console.log(xAxisLimit)
+            //     $(".bullet").remove
+            // }
         });
 }
 
