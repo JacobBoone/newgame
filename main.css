@@ -7,7 +7,11 @@ body{
 	/*background: url('http://apod.nasa.gov/apod/image/1407/ngc2818_hubble_960.jpg') no-repeat center center fixed;*/
 	background: url('https://lh3.googleusercontent.com/-o0MWSXVc0Vg/T5oyjC9IDDI/AAAAAAAAM7s/SKeFoAQBsaY/s2048-d/outer%252520space%252520stars%2525202560x1600%252520wallpaper_www.wallfox_net_25.jpg') no-repeat center center fixed;
 }
-
+.coordinate, .coordinates{
+	color: white;
+	/*width: 40px;*/
+	/*height: 20px;*/
+}
 .rebelfleet {
 	width: 40%;
 	height: 100%;
@@ -57,7 +61,7 @@ body{
 .red-bullettop {
 	background-color: red;
 	border-radius: 1px;
-	width: 10px;
+	width: 15px;
 	height: 2px;
 	z-index: 2;
 	top: 28px;
@@ -69,7 +73,7 @@ body{
 .red-bulletbottom {
 	background-color: red;
 	border-radius: 1px;
-	width: 10px;
+	width: 15px;
 	height: 2px;
 	z-index: 2;
 	top: 110px;

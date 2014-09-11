@@ -1,5 +1,8 @@
+// var pos = $('.ship').position();
+// console.log(pos.left, pos.top);
+
 // Constructor
-var Rebelship = function(name, image){
+var Rebelship = function(name, image, positon){
 	this.name = name;
 	this.image = image;
 
@@ -16,13 +19,16 @@ var Rebelship = function(name, image){
 
     //array of created rebel ships
     var rebelShipsArr = [xwing, falcon];
-    // var rebelShipsArr = [xwing];
 
     var displayRebels = function(arr) {
         for (var i = 0; i < arr.length; i++) {
-            $('.ship').append(arr[1].image)
+            $('.ship').append(arr[0].image)
+            // $('.coordinates').append(arr[0].positon)
+            // console.log(event.pageX, event.pageY)
         };
     }
+
+
 
 // var Bullets = function(){
 // }
@@ -155,11 +161,11 @@ $(document).keydown(function(e) {
 
 
 function flyingBullet(){
-    console.log('flies')
-    var xAxisLimit = 1350;
+    // var xAxisLimit = 1350;
       $(".bullet").each(function() {
             var oldLeft = $(this).offset().left;
             $(this).css("left", oldLeft + 10 + "px");
+            console.log('laser flies')
             // if (xAxisLimit){
             //     console.log(xAxisLimit)
             //     $(".bullet").remove
@@ -167,8 +173,7 @@ function flyingBullet(){
         });
 }
 
-
-setInterval(flyingBullet, 100);
+setInterval(flyingBullet, 200);
 
 // $( ".fa-fighter-jet" ).keydown(function() {
 //   alert( "Handler for .keypress() called." );
