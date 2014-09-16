@@ -1,8 +1,17 @@
-// var pos = $('.ship').position();
-// console.log(pos.left, pos.top);
+// to do
+//1. bullets to fly on their own, perhaps independant div that = same loaction as the flying plane
+// 2. bullet need to be removed when end of page is reached
+// 3. make ship only fly within certain range
+
+var WW = $(window).width()
+var WH = $(window).height()
+
+var MAX_SHIP_TOP = WH -20;
+var MAX_SHIP_FORWARD = WW -500;
+
 
 // Constructor
-var Rebelship = function(name, image, positon){
+var Rebelship = function(name, image){
 	this.name = name;
 	this.image = image;
 
@@ -48,6 +57,14 @@ var Rebelship = function(name, image, positon){
 $(document).on('ready', function() {
  
     displayRebels(rebelShipsArr);
+
+
+var pos = $('.ship').offset();
+console.log("Coordinates: pageX: " + pos.top + ", pageY: " + pos.left);
+
+var getCoor = $('.coordinates').text("  top: " + pos.top + ", left: " + pos.left)
+
+
 
 
 // $(document).keydown(function(e) {
@@ -136,6 +153,7 @@ $(document).keydown(function(e) {
         var topBullet = ('<div class="bullet red-bullettop"></div>');
         var bottomBullet = ('<div class="bullet red-bulletbottom"></div>')
         $('.ship').append(topBullet, bottomBullet)
+
         console.log('shot fired') 
         break;
 
@@ -159,13 +177,36 @@ $(document).keydown(function(e) {
     e.preventDefault(); // prevent the default action (scroll / move caret)
 });
 
+var bullPos = $('.ship').offset();
+ // console.log("Bullet Coordinates: pageX: " + bullPos.top + ", pageY: " + bullPos.left)
+// var endLeft = bullPos.left;
+// var endTop = bullPos.top;
+// var removeBullet = function(){
+//     if (endPage === 1360){
+//      $('.bullet').remove();
+//     };
+    
+// }
 
-function flyingBullet(){
+var flyingBullet = function(){
     // var xAxisLimit = 1350;
+    var self = this;
       $(".bullet").each(function() {
             var oldLeft = $(this).offset().left;
             $(this).css("left", oldLeft + 10 + "px");
-            console.log('laser flies')
+            // if (endLeft >= 1300)
+            // console.log('laser flies')
+
+
+
+            // if (left === 1300){
+            //  $('.bullet').remove();
+            // };
+
+         // Boundary Logic
+            // if( x<20 || x>279) removeBullet=-removeBullet; 
+            // if( y<20 || y>279) dy=-dy;
+
             // if (xAxisLimit){
             //     console.log(xAxisLimit)
             //     $(".bullet").remove
@@ -173,8 +214,28 @@ function flyingBullet(){
         });
 }
 
+
 setInterval(flyingBullet, 200);
 
+// var getInt = setInterval()
+
+// var rightEnd = function(){
+//     $(window).width
+// }
+
+// var end = $(window).width
+// console.log(end)
+
+// var result = setInterval
+
+// var removeBullet = function(){
+//     if (left >= $(window).width){
+//        clearInterval() 
+//     }
+    
+// }
+
+// removeBullet()
 // $( ".fa-fighter-jet" ).keydown(function() {
 //   alert( "Handler for .keypress() called." );
 // });
@@ -185,3 +246,5 @@ setInterval(flyingBullet, 200);
 
 
 });
+
+

@@ -7,8 +7,15 @@ body{
 	/*background: url('http://apod.nasa.gov/apod/image/1407/ngc2818_hubble_960.jpg') no-repeat center center fixed;*/
 	background: url('https://lh3.googleusercontent.com/-o0MWSXVc0Vg/T5oyjC9IDDI/AAAAAAAAM7s/SKeFoAQBsaY/s2048-d/outer%252520space%252520stars%2525202560x1600%252520wallpaper_www.wallfox_net_25.jpg') no-repeat center center fixed;
 }
+
+#mycanvas{
+	border-radius: 3px;
+	border-color: white;
+	z-index: 3;
+}
 .coordinate, .coordinates{
 	color: white;
+	display: inline-block;
 	/*width: 40px;*/
 	/*height: 20px;*/
 }
@@ -41,6 +48,7 @@ body{
 	position: absolute;
 	left: 8%;
 	top: 8%;
+
 	/*background: white;*/
 }
 
