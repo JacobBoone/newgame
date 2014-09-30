@@ -9,6 +9,7 @@ var WH = $(window).height()
 var MAX_SHIP_TOP = WH -20;
 var MAX_SHIP_FORWARD = WW -500;
 
+var allBullets =[];
 
 // Constructor
 var Rebelship = function(name, image){
@@ -153,6 +154,7 @@ $(document).keydown(function(e) {
         var topBullet = ('<div class="bullet red-bullettop"></div>');
         var bottomBullet = ('<div class="bullet red-bulletbottom"></div>')
         $('.ship').append(topBullet, bottomBullet)
+        allBullets.push(topBullet, bottomBullet);
 
         console.log('shot fired') 
         break;
